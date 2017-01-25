@@ -38,7 +38,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
   
     @Override
     protected String[] getServletMappings() {
-        return new String[] { "*.html" };
+        return new String[] { "*.html", "*.pdf", "*.css" };
     }
  
 }

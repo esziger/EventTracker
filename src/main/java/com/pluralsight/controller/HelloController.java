@@ -13,4 +13,9 @@ public class HelloController {
 		
 		return "hello";	//The .jsp is needed because we don´t have a view-resolver yet
 	}
+	
+	@RequestMapping(value="/index")
+	public String index(Model model){
+		return "forward:index.jsp";
+	}
 }
