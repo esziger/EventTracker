@@ -2,6 +2,8 @@
     pageEncoding="ISO-8859-1"%>
     
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,13 +23,22 @@
 </style>
 </head>
 <body>
+
+	<a href="?language=en">
+		English
+	</a>
+	
+	<a href="?language=sw">
+		Swedish
+	</a>
+
 	<form:form commandName="attendee"> <!-- form is tied to the event object what we added to the Model in the Controller -->
 		<form:errors path="*" cssClass="errorblock" element="div"></form:errors>
-		<label for="textinput1">Enter Name:</label>
+		<label for="textinput1"><spring:message code="attendee.name"/>:</label>
 		<form:input path="name" cssErrorClass="error"/>
 		<form:errors path="name" cssErrorClass="error"></form:errors>
 		<br>
-		<label for="textinput2">Enter E-mail Address:</label>
+		<label for="textinput2"><spring:message code="attendee.email.address"/>:</label>
 		<form:input path="emailAddress" cssErrorClass="error"/>
 		<form:errors path="emailAddress" cssErrorClass="error"></form:errors>
 		<br>
