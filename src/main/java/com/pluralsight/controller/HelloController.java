@@ -11,6 +11,6 @@ public class HelloController {
 	public String sayHello(Model model){
 		model.addAttribute("greeting", "Hello World");
 		
-		return "hello.jsp";	//The .jsp is needed because we don´t have a view-resolver yet
+		return "hello";	//The .jsp is needed because we don´t have a view-resolver yet
 	}
 }
